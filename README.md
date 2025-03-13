@@ -1,81 +1,52 @@
-# Rental-Service-Platform
-Project Description
+# Rental Service Platform
 
-This project is a Rental Service Platform that allows users to list and rent various items. The platform provides two main business features with full CRUD (Create, Read, Update, Delete) functionality. It also includes authentication and authorization mechanisms to ensure secure access to different features.
+## Project Description
 
-The backend is built as a REST API that serves the front-end application. Various levels of testing, including Widget, Unit, and Integration Testing, are implemented to ensure the reliability of the system.
+The **Rental Service Platform** is an innovative application that enables users to list, rent, and manage various items seamlessly. It provides an intuitive interface for both owners and renters, ensuring a smooth transaction process. This platform ensures security and efficiency by integrating **CRUD (Create, Read, Update, Delete)** functionality for listings and rental transactions, along with authentication and authorization mechanisms.
 
-               Team Members
+## Team Members
 
-Full Name                   ID
+- **Dibora Taye** - ID NO: UGR/2376/15
+- **Eleni Abebe** - ID NO: UGR/2233/15
+- **Hilina Zemdkun** - ID NO: UGR/1331/15
+- **Ruth Yeshitila** - ID NO: UGR/8377/15
+- **Yohannes Worku** - ID NO: UGR/2047/15
 
-Dibora Taye          UGR/2376/15
+## Features
 
-Eleni Abebe         UGR/2233/15
+### 🏠 Rental Listings Management (CRUD)
+Owners can create, update, and delete rental listings, while users can browse and filter available listings efficiently.
 
-Hilina Zemdkun       UGR/1331/15
+### 🔄 Rental Requests & Transactions (CRUD)
+Users can request to rent an item, and owners have the ability to approve or reject rental requests. The system includes a status-tracking feature to monitor transactions.
 
-Ruth Yeshitila       UGR/8377/15
+### 🔐 Authentication & Authorization
+Role-based authentication ensures different levels of access:
+- **Admins**: Can manage, edit, and delete listings and transactions.
+- **Owners**: Can list items for rent and manage rental requests.
+- **Renters**: Can browse listings and submit rental requests.
 
-Yohannes Worku        UGR/2047/15
+### ⚡ REST API
+The backend is built using **Node.js (Express) / Django / FastAPI**, providing a RESTful API to handle requests related to listings, rentals, and authentication. The API is fully functional locally, and all data is stored in a local database.
 
-Features
+### 🛠 Unit and Integration Testing
+- **Unit tests** ensure each feature (e.g., rental listing, user authentication) functions correctly.
+- **Integration tests** validate smooth interactions between system components.
+- **Widget tests** ensure Flutter UI components work as expected.
 
-1. Authentication and Authorization
+## Tech Stack
+- **Frontend:** Flutter (Dart)
+- **Backend:** Node.js (Express) / Django / FastAPI
+- **Database:** PostgreSQL / MySQL
+- **Authentication:** JWT-based authentication
+- **Testing:** Jest / Mocha / PyTest / Flutter Testing
+- **Version Control:** GitHub
 
-User registration and login functionality
+## Installation and Setup
 
-Role-based access control (Admin, Renter, Owner)
-
-Token-based authentication (JWT or similar)
-
-2. Business Features
-
-a) Rental Listings Management
-
-Owners can create, update, and delete rental listings
-
-Users can view available listings
-
-Search and filter functionality for rental items
-
-
-3. Backend (REST API)
-
-Built with Django/FastAPI/Express
-
-Database: PostgreSQL/MySQL
-
-Implements secure authentication and authorization
-
-Provides API endpoints for both business features
-
-4. Testing
-
-Unit tests for individual functions and components
-
-Integration tests for API endpoints
-
-Widget tests (Flutter frontend)
-
-Tech Stack
-
-Frontend: Flutter (Dart)
-
-Backend: Node.js (Express) / Django / FastAPI
-
-Database: PostgreSQL / MySQL
-
-Authentication: JWT-based authentication
-
-Testing: Jest / Mocha / PyTest / Flutter Testing
-
-Version Control: GitHub
-
-Installation and Setup
-
+```sh
 # Clone the repository
-git clone https://github.com/ruye19/Rental-Service-Platform.git
+git clone https://github.com/yourusername/rental-service.git
 cd rental-service
 
 # Install backend dependencies
@@ -91,15 +62,14 @@ flutter pub get
 
 # Run the Flutter app
 flutter run
+```
 
-Usage
+## Usage
+- Sign up or log in as an **Owner** to create rental listings.
+- Sign up or log in as a **Renter** to browse and rent available listings.
+- Manage rental requests, approvals, and payments securely.
 
-Sign up or log in as an Owner to create rental listings.
+---
 
-Sign up or log in as a Renter to browse and rent available listings.
+**Note:** Ensure to update the GitHub repository link after creating it.
 
-Manage rental requests, approvals, and payments securely.
-
-License
-
-This project is for educational purposes only and is not intended for commercial use.
