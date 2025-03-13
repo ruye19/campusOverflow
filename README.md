@@ -75,7 +75,7 @@ Version Control: GitHub
 Installation and Setup
 
 # Clone the repository
-git clone https://github.com/yourusername/rental-service.git
+git clone https://github.com/ruye19/Rental-Service-Platform.git
 cd rental-service
 
 # Install backend dependencies
