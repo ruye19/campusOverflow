@@ -42,27 +42,7 @@ The backend is built using **Node.js (Express) / Django / FastAPI**, providing a
 - **Testing:** Jest / Mocha / PyTest / Flutter Testing
 - **Version Control:** GitHub
 
-## Installation and Setup
 
-```sh
-# Clone the repository
-git clone https://github.com/yourusername/rental-service.git
-cd rental-service
-
-# Install backend dependencies
-cd backend
-npm install  # or pip install -r requirements.txt (if using Python)
-
-# Run the backend
-npm start  # or python manage.py runserver (Django)
-
-# Install Flutter dependencies
-cd ../frontend
-flutter pub get
-
-# Run the Flutter app
-flutter run
-```
 
 ## Usage
 - Sign up or log in as an **Owner** to create rental listings.
