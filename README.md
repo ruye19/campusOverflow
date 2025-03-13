@@ -52,5 +52,5 @@ The backend is built using **Node.js (Express) / Django / FastAPI**, providing a
 
 ---
 
-**Note:** Ensure to update the GitHub repository link after creating it.
+
 
