@@ -14,17 +14,19 @@ The **Rental Service Platform** is an innovative application that enables users 
 
 ## Features
 
-### 🏠 Rental Listings Management (CRUD)
-Owners can create, update, and delete rental listings, while users can browse and filter available listings efficiently.
+### 🔐 Authentication and Authorization
+- User registration and login functionality
+- Role-based access control (**Admin, Renter, Owner**)
 
-### 🔄 Rental Requests & Transactions (CRUD)
-Users can request to rent an item, and owners have the ability to approve or reject rental requests. The system includes a status-tracking feature to monitor transactions.
+### 🏠 Business Features
+#### For Owners
+- Owners can create new rental listings by providing necessary details.
+- Owners can modify their existing listings.
+- Owners can remove their rental listings from the platform when they no longer wish to offer the rental.
 
-### 🔐 Authentication & Authorization
-Role-based authentication ensures different levels of access:
-- **Admins**: Can manage, edit, and delete listings and transactions.
-- **Owners**: Can list items for rent and manage rental requests.
-- **Renters**: Can browse listings and submit rental requests.
+#### For Users
+- Users can view available rental listings.
+- Users can view detailed information for each rental listing, including price, description, and availability.
 
 ### ⚡ REST API
 The backend is built using **Node.js (Express) / Django / FastAPI**, providing a RESTful API to handle requests related to listings, rentals, and authentication. The API is fully functional locally, and all data is stored in a local database.
@@ -41,7 +43,6 @@ The backend is built using **Node.js (Express) / Django / FastAPI**, providing a
 - **Authentication:** JWT-based authentication
 - **Testing:** Jest / Mocha / PyTest / Flutter Testing
 - **Version Control:** GitHub
-
 
 
 ## Usage
