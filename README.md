@@ -29,7 +29,7 @@ The **Rental Service Platform** is an innovative application that enables users 
 - Users can view detailed information for each rental listing, including price, description, and availability.
 
 ### ⚡ REST API
-The backend is built using **Node.js (Express) / Django / FastAPI**, providing a RESTful API to handle requests related to listings, rentals, and authentication. The API is fully functional locally, and all data is stored in a local database.
+The backend is built using Node.js (Express) , providing a RESTful API to handle requests related to listings, rentals, and authentication. The API is fully functional locally, and all data is stored in a local database.
 
 ### 🛠 Unit and Integration Testing
 - **Unit tests** ensure each feature (e.g., rental listing, user authentication) functions correctly.
