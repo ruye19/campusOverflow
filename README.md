@@ -38,7 +38,7 @@ The backend is built using Node.js (Express) , providing a RESTful API to handle
 
 ## Tech Stack
 - **Frontend:** Flutter (Dart)
-- **Backend:** Node.js (Express) / Django / FastAPI
+- **Backend:** Node.js (Express) 
 - **Database:** PostgreSQL / MySQL
 - **Authentication:** JWT-based authentication
 - **Testing:** Jest / Mocha / PyTest / Flutter Testing
