@@ -21,7 +21,7 @@
 
 ### ❓ Q&A System
 - Users can post questions related to their academic or campus life
-- Others can submit answers and engage in discussions
+- Others can submit answers 
 - Voting system to highlight helpful content
 
 ### 🛠 REST API
