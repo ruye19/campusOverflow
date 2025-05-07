@@ -1,24 +1,23 @@
-
 package com.example.assign.ui.dashboard
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.text.font.FontWeight
 import com.example.assign.model.DashboardStats
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DashboardScreen(
     userName: String,
@@ -34,25 +33,30 @@ fun DashboardScreen(
                 title = {},
                 navigationIcon = {
                     IconButton(onClick = onBackClick) {
-                        Icon(Icons.Default.ArrowBack, contentDescription = "Back", tint = Color.White)
+                        Icon(Icons.Filled.ArrowBack, contentDescription = "Back", tint = Color.White)
                     }
                 },
                 actions = {
                     Column(horizontalAlignment = Alignment.End) {
-                        Text(text = userName, color = Color.White, fontSize = 14.sp)
-                        Text(text = role, color = Color.Gray, fontSize = 12.sp)
+                        Text(
+                            text = userName,
+                            color = Color.White,
+                            fontSize = 16.sp,
+                            fontWeight = FontWeight.Bold,
+                            modifier = Modifier.padding(end = 8.dp)
+                        )
+                        Text(
+                            text = role,
+                            color = Color.Gray,
+                            fontSize = 12.sp,
+                            modifier = Modifier.padding(end = 8.dp)
+                        )
                     }
-                    Icon(
-                        imageVector = Icons.Default.AccountCircle,
-                        contentDescription = null,
-                        tint = Color.White,
-                        modifier = Modifier.size(40.dp).padding(start = 8.dp, end = 16.dp)
-                    )
                 },
-                backgroundColor = Color.Black
+                colors = TopAppBarDefaults.topAppBarColors(containerColor = Color.Black)
             )
         },
-        backgroundColor = Color.Black
+        containerColor = Color.Black
     ) { padding ->
         Column(
             modifier = Modifier
@@ -67,22 +71,27 @@ fun DashboardScreen(
                 fontSize = 14.sp,
                 modifier = Modifier.padding(top = 8.dp, bottom = 24.dp)
             )
+
             StatRow(stats = stats)
+
             Spacer(modifier = Modifier.height(32.dp))
+
             Button(
                 onClick = onViewQuestions,
                 modifier = Modifier.fillMaxWidth(),
-                colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xFFFF6D00))
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFFF6D00))
             ) {
-                Text("View Questions", color = Color.White)
+                Text("View Questions", color = Color.White, fontWeight = FontWeight.Bold)
             }
+
             Spacer(modifier = Modifier.height(16.dp))
+
             Button(
                 onClick = onViewUsers,
                 modifier = Modifier.fillMaxWidth(),
-                colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xFFFF6D00))
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFFF6D00))
             ) {
-                Text("View Users", color = Color.White)
+                Text("View Users", color = Color.White, fontWeight = FontWeight.Bold)
             }
         }
     }
@@ -90,13 +99,19 @@ fun DashboardScreen(
 
 @Composable
 fun StatRow(stats: DashboardStats) {
-    Row(
-        horizontalArrangement = Arrangement.SpaceEvenly,
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier.fillMaxWidth()
     ) {
-        StatCircle(label = "QUESTIONS", count = stats.questions)
-        StatCircle(label = "SOLUTIONS", count = stats.solutions)
-        StatCircle(label = "USERS", count = stats.users)
+        Row(
+            horizontalArrangement = Arrangement.SpaceEvenly,
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            StatCircle(label = "QUESTIONS", count = stats.questions)
+            StatCircle(label = "SOLUTIONS", count = stats.solutions)
+        }
+        Spacer(modifier = Modifier.height(16.dp)) // Add space between the rows
+        StatCircle(label = "USERS", count = stats.users) // USERS circle now below the other two
     }
 }
 
@@ -114,7 +129,7 @@ fun StatCircle(label: String, count: Int) {
             Text(
                 text = count.toString(),
                 color = Color.White,
-                fontSize = 24.sp,
+                fontSize = 30.sp, // Adjusted font size
                 fontWeight = FontWeight.Bold
             )
         }
