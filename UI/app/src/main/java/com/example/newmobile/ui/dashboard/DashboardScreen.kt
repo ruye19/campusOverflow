@@ -106,16 +106,21 @@ fun DashboardScreen(
 
 @Composable
 fun StatRow(stats: DashboardStats) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 8.dp),
-        horizontalArrangement = Arrangement.SpaceEvenly,
-        verticalAlignment = Alignment.CenterVertically
+      Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        modifier = Modifier.fillMaxWidth()
     ) {
-        StatCircle(label = "QUESTIONS", count = stats.questions)
-        StatCircle(label = "SOLUTIONS", count = stats.solutions)
-        StatCircle(label = "USERS", count = stats.users)
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 8.dp),
+            horizontalArrangement = Arrangement.SpaceEvenly,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            StatCircle(label = "QUESTIONS", count = stats.questions)
+            StatCircle(label = "SOLUTIONS", count = stats.solutions)
+            StatCircle(label = "USERS", count = stats.users)
+        }
     }
 }
 
