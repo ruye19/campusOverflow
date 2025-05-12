@@ -1,4 +1,4 @@
-package com.example.newmobile.ui.theme
+package com.example.assign.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
