@@ -86,3 +86,36 @@ fun WelcomeScreen(navController: NavController) {
         ) {
             Text("Create Account", fontSize = 18.sp)
         }
+        Spacer(modifier = Modifier.height(24.dp))
+
+        Text(
+            text = "Join our community of learners",
+            color = Color.Gray,
+            fontSize = 14.sp,
+            textAlign = TextAlign.Center
+        )
+    }
+}
+
+@Composable
+private fun FeatureItem(title: String, description: String) {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 8.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(
+            text = title,
+            color = Color.White,
+            fontSize = 20.sp,
+            fontWeight = FontWeight.Medium
+        )
+        Text(
+            text = description,
+            color = Color.Gray,
+            fontSize = 14.sp,
+            textAlign = TextAlign.Center
+        )
+    }
+}
