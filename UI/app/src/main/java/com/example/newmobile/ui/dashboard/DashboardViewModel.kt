@@ -4,7 +4,7 @@ package com.example.assign.ui.dashboard
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
-import com.example.assign.model.DashboardStats
+import com.frontendmasters.campusoverflow.model.DashboardStats
 
 class DashboardViewModel : ViewModel() {
 
