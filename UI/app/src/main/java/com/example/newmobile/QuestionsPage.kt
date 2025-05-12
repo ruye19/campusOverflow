@@ -1,4 +1,4 @@
-package com.example.assign
+package com.example.newmobile
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -87,6 +87,7 @@ fun QuestionsPage(navController: NavController) {
                         thickness = 1.dp,
                         modifier = Modifier.padding(vertical = 12.dp)
                     )
+
                     // Form section
                     Text(
                         "Ask your Question",
@@ -212,6 +213,7 @@ fun QuestionsPage(navController: NavController) {
                     thickness = 1.dp,
                     modifier = Modifier.padding(vertical = 12.dp)
                 )
+
                 // Form section
                 Text(
                     "Ask your Question",
