@@ -212,3 +212,97 @@ fun QuestionsPage(navController: NavController) {
                     thickness = 1.dp,
                     modifier = Modifier.padding(vertical = 12.dp)
                 )
+                // Form section
+                Text(
+                    "Ask your Question",
+                    color = Color.White,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 18.sp
+                )
+                Spacer(modifier = Modifier.height(12.dp))
+
+                OutlinedTextField(
+                    value = title,
+                    onValueChange = { title = it },
+                    label = { Text("Title", color = Color.Gray) },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(60.dp),
+                    colors = OutlinedTextFieldDefaults.colors(
+                        focusedTextColor = Color.White,
+                        unfocusedTextColor = Color.White,
+                        focusedContainerColor = Color.Gray,
+                        unfocusedContainerColor = Color.Gray,
+                        cursorColor = Color.White,
+                        focusedLabelColor = Color.Gray,
+                        unfocusedLabelColor = Color.Gray
+                    )
+                )
+
+                Spacer(modifier = Modifier.height(12.dp))
+
+                OutlinedTextField(
+                    value = description,
+                    onValueChange = { description = it },
+                    label = { Text("Description", color = Color.Gray) },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(120.dp),
+                    colors = OutlinedTextFieldDefaults.colors(
+                        focusedTextColor = Color.White,
+                        unfocusedTextColor = Color.White,
+                        focusedContainerColor = Color.Gray,
+                        unfocusedContainerColor = Color.Gray,
+                        cursorColor = Color.White,
+                        focusedLabelColor = Color.Gray,
+                        unfocusedLabelColor = Color.Gray
+                    )
+                )
+
+                Spacer(modifier = Modifier.height(24.dp))
+
+                Button(
+                    onClick = { /* TODO: Handle posting logic */ },
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = Color(0xFFFF9800),
+                        contentColor = Color.White
+                    ),
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Text("Post", color = Color.White)
+                }
+
+                Spacer(modifier = Modifier.height(24.dp))
+
+                // Questions list
+                Text(
+                    "Questions:",
+                    color = Color.White,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 16.sp
+                )
+                Spacer(modifier = Modifier.height(8.dp))
+
+                LazyColumn(
+                    modifier = Modifier.weight(1f),
+                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    items(questions) { question ->
+                        Card(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .clickable { navController.navigate("answers") },
+                            colors = CardDefaults.cardColors(containerColor = Color.DarkGray)
+                        ) {
+                            Text(
+                                text = question,
+                                color = Color.White,
+                                modifier = Modifier.padding(16.dp)
+                            )
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
